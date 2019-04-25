@@ -1,0 +1,11 @@
+.letraAmarilla {
+  color: yellow;
+}
+
+.subrayado {
+  text-decoration: underline;
+}
+
+.oculto {
+  display: none;
+}

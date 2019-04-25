@@ -1,0 +1,55 @@
+<h1>Directivas</h1>
+<!-- <h2>Estructurales</h2>
+
+<ul>
+  <li *ngFor="let nombre of starks; let pos = index">{{pos}}: {{ nombre }}</li>
+</ul>
+
+<ul>
+  <li *ngFor="let item of personaje | keyvalue">{{item.key | titlecase}}: {{item.value}}</li>
+</ul>
+
+
+<button type="button" (click)="mostrar = !mostrar">Cambiar mostrar</button>
+
+<p *ngIf="mostrar">Se muestra si mostrar = true</p>
+
+<p *ngIf="mostrar; else else1">Se muestra si mostrar = true (IF1)</p>
+<ng-template #else1>
+  <p>Se muestra si mostrar = false (ELSE1)</p>
+</ng-template>
+
+<div *ngIf="mostrar; then if2 else else2"></div>
+<ng-template #if2>
+  <p>Se muestra si mostrar = true (IF2)</p>
+</ng-template>
+<ng-template #else2>
+  <p>Se muestra si mostrar = false (ELSE2)</p>
+</ng-template>
+
+<div [ngSwitch]="personaje.nombre">
+  <p *ngSwitchCase="'Arya'">Es Arya</p>
+  <p *ngSwitchCase="'Robb'">Es Robb</p>
+  <p *ngSwitchDefault>Es otro</p>
+</div> -->
+
+<h2>Atributo</h2>
+<button type="button" (click)="mostrar = !mostrar">Cambiar mostrar</button>
+
+<p [ngClass]="getClases()">Texto de color amarillo y subrayado</p>
+<p [ngStyle]="{color: 'blue', 'background-color': 'black'}">Texto de color blue y fondo negro</p>
+
+<p appPintarFondo>Se pinta el fondo</p>
+<p appPintarFondo="blue">Se pinta el fondo</p>
+<p appPintarFondo="yellow">Se pinta el fondo</p>
+<p appPintarFondo="red">Se pinta el fondo</p>
+
+<div appDesplegar>
+  <p>Pasa por aquí para mostrar el desplegable:</p>
+  <select class="oculto">
+    <option value=""></option>
+    <option value="tesla">Tesla</option>
+    <option value="audi">Audi</option>
+    <option value="bmw">Bmw</option>
+  </select>
+</div>

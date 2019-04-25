@@ -1,0 +1,28 @@
+<h1>Pipes</h1>
+<p>{{ texto }}</p>
+<p>{{ texto | uppercase }}</p>
+<p>{{ texto | titlecase }}</p>
+<p>{{ texto | slice:3:7 | uppercase }}</p>
+
+<p>{{ precio }}</p>
+<p>{{ precio | doble | currency:'EUR' }}</p>
+<p>{{ precio | doble:6 }}</p>
+<p>{{ precio | doble:6:3 }}</p>
+
+<p>{{ fecha }}</p>
+<p>{{ fecha | date }}</p>
+<p>{{ fecha | date:'dd/MM/yyyy' }}</p>
+
+<p>{{ mensaje | ocultar:['butt', 'ipsum'] }}</p>
+<p>{{ mensaje | ocultar:mascotas }}</p>
+
+
+<button type="button" (click)="mascotas.push('Periquito')">Añadir periquito</button>
+<ul>
+  <li *ngFor="let mascota of mascotas">{{ mascota }}</li>
+</ul>
+<ul>
+  <li *ngFor="let mascota of mascotas | filtro:'r'">{{ mascota }}</li>
+</ul>
+
+<p>Mensaje secreto: {{ mensajeAsinc | async }}</p>
