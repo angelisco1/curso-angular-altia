@@ -11,6 +11,9 @@ import { FiltroPipe } from './cmp-pipes/filtro.pipe';
 import { CmpDirectivasComponent } from './cmp-directivas/cmp-directivas.component';
 import { PintarFondoDirective } from './cmp-directivas/pintar-fondo.directive';
 import { DesplegarDirective } from './cmp-directivas/desplegar.directive';
+import { CmpFormulariosComponent } from './cmp-formularios/cmp-formularios.component';
+import { FormNormalComponent } from './cmp-formularios/form-normal/form-normal.component';
+import { FormReactivoComponent } from './cmp-formularios/form-reactivo/form-reactivo.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +25,10 @@ import { DesplegarDirective } from './cmp-directivas/desplegar.directive';
     FiltroPipe,
     CmpDirectivasComponent,
     PintarFondoDirective,
-    DesplegarDirective
+    DesplegarDirective,
+    CmpFormulariosComponent,
+    FormNormalComponent,
+    FormReactivoComponent
   ],
   imports: [
     BrowserModule,
