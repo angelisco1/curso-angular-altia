@@ -23,7 +23,7 @@ export class FormReactivoComponent implements OnInit {
   }
 
   guardar() {
-    console.log(this.miFormulario);
+    console.log(Object.keys(this.miFormulario.controls.nombre.errors));
   }
 
   // nombreValido(campo: FormControl) {

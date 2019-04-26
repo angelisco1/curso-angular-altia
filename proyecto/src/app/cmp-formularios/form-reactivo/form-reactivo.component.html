@@ -3,17 +3,30 @@
   <div>
     <label for="nombre">Nombre:</label>
     <input type="text" id="nombre" formControlName="nombre">
-    <span *ngIf="miFormulario.controls.nombre.invalid &&miFormulario.controls.nombre.dirty">{{miFormulario.controls.nombre.errors | json}}</span>
+    <ng-container *ngIf="miFormulario.controls.nombre.invalid &&miFormulario.controls.nombre.dirty">
+      <ul>
+        <li *ngFor="let err of miFormulario.controls.nombre.errors | keyvalue">{{err.key}}</li>
+      </ul>
+    </ng-container>
   </div>
   <div>
     <label for="email">Email:</label>
     <input type="email" id="email" formControlName="email">
-    <span *ngIf="miFormulario.controls.email.invalid &&miFormulario.controls.email.dirty">{{miFormulario.controls.email.errors | json}}</span>
+    <ng-container *ngIf="miFormulario.controls.email.invalid &&miFormulario.controls.email.dirty">
+      <p>Errores:</p>
+      <ul>
+        <li *ngFor="let err of miFormulario.controls.email.errors | keyvalue">{{err.key}}</li>
+      </ul>
+    </ng-container>
   </div>
   <div>
     <label for="password">Password:</label>
     <input type="password" id="password" formControlName="password">
-    <span *ngIf="miFormulario.controls.password.invalid &&miFormulario.controls.password.dirty">{{miFormulario.controls.password.errors | json}}</span>
+    <ng-container *ngIf="miFormulario.controls.password.invalid &&miFormulario.controls.password.dirty">
+      <ul>
+        <li *ngFor="let err of miFormulario.controls.password.errors | keyvalue">{{err.key}}</li>
+      </ul>
+    </ng-container>
   </div>
   <div formArrayName="skills">
     <input type="text" *ngFor="let skill of miFormulario.controls.skills.controls; let pos = index" [formControlName]="pos">
