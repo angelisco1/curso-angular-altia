@@ -1,4 +1,4 @@
-import { Injectable } from '@angular/core';
+import { Injectable, EventEmitter } from '@angular/core';
 import { LogService } from './log.service';
 
 export interface IMsg {
@@ -14,6 +14,7 @@ export class ChatService {
     {msg: 'Hola Usuario B', user: 'A'},
     {msg: 'Hola A, que tal?', user: 'B'},
   ];
+  msgEmitido = new EventEmitter<IMsg>();
 
   constructor(private logServ: LogService) { }
 
@@ -24,6 +25,11 @@ export class ChatService {
   addMsg(msg: IMsg): void {
     this.chat.push(msg);
     this.logServ.mostrar('Nuevo mensaje...')
+  }
+
+  sendMsg(msg: IMsg): void {
+    this.msgEmitido.emit(msg);
+    this.logServ.mostrar('Emitiendo...');
   }
 
 }

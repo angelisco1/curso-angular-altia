@@ -1,6 +1,7 @@
 <h2>Usuario A</h2>
 <input type="text" #msgA>
 <button type="button" (click)="enviar(msgA.value)">Enviar</button>
+<button type="button" (click)="emitir(msgA.value)">Emitir</button>
 <ul>
   <li *ngFor="let mensaje of mensajesChat">
     <strong>{{mensaje.user}}</strong>  dice: <em>{{mensaje.msg}}</em>

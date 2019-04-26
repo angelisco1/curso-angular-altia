@@ -8,11 +8,16 @@ import { IMsg, ChatService } from '../chat.service';
 })
 export class UsuarioBComponent implements OnInit {
   mensajesChat: Array<IMsg> = [];
+  mensajeRecibido: IMsg = {msg: '', user: ''};
 
   constructor(private chatServ: ChatService) { }
 
   ngOnInit() {
     this.mensajesChat = this.chatServ.getChat();
+    this.chatServ.msgEmitido.subscribe((msg: IMsg) => {
+      // Se ejecuta cuando se hace un msgEmitido.emit(...)
+      this.mensajeRecibido = msg;
+    })
   }
 
   enviar(msg) {

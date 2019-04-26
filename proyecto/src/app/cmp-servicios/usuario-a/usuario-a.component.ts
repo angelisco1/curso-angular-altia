@@ -20,4 +20,9 @@ export class UsuarioAComponent implements OnInit {
     this.chatServ.addMsg(nuevoMsg);
   }
 
+  emitir(msg) {
+    const nuevoMsg: IMsg = {msg: msg, user: 'A'};
+    this.chatServ.sendMsg(nuevoMsg);
+  }
+
 }

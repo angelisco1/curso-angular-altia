@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { LogService } from './log.service';
-import { ChatService } from './chat.service';
+import { ChatService, IMsg } from './chat.service';
 
 @Component({
   selector: 'app-cmp-servicios',
@@ -8,10 +8,15 @@ import { ChatService } from './chat.service';
   styleUrls: ['./cmp-servicios.component.css']
 })
 export class CmpServiciosComponent implements OnInit {
+  mensajeRecibido: IMsg = {msg: '', user: ''};
 
-  constructor(private logServ: LogService) { }
+  constructor(private logServ: LogService, private chatServ: ChatService) { }
 
   ngOnInit() {
+    this.chatServ.msgEmitido.subscribe((msg: IMsg) => {
+      // Se ejecuta cuando se hace un msgEmitido.emit(...)
+      this.mensajeRecibido = msg;
+    })
   }
 
   mostrarMsg() {
