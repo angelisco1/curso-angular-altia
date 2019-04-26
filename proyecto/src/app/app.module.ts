@@ -14,6 +14,9 @@ import { DesplegarDirective } from './cmp-directivas/desplegar.directive';
 import { CmpFormulariosComponent } from './cmp-formularios/cmp-formularios.component';
 import { FormNormalComponent } from './cmp-formularios/form-normal/form-normal.component';
 import { FormReactivoComponent } from './cmp-formularios/form-reactivo/form-reactivo.component';
+import { CmpServiciosComponent } from './cmp-servicios/cmp-servicios.component';
+import { UsuarioAComponent } from './cmp-servicios/usuario-a/usuario-a.component';
+import { UsuarioBComponent } from './cmp-servicios/usuario-b/usuario-b.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +31,10 @@ import { FormReactivoComponent } from './cmp-formularios/form-reactivo/form-reac
     DesplegarDirective,
     CmpFormulariosComponent,
     FormNormalComponent,
-    FormReactivoComponent
+    FormReactivoComponent,
+    CmpServiciosComponent,
+    UsuarioAComponent,
+    UsuarioBComponent
   ],
   imports: [
     BrowserModule,
