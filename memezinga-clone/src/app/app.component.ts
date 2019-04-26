@@ -8,4 +8,5 @@ import { Meme } from './meme';
 })
 export class AppComponent {
   meme: Meme = new Meme('Arriba', 'Abajo', '#ffffff', 'https://i.imgflip.com/12dxv.jpg', '0');
+  verLista: boolean = false;
 }

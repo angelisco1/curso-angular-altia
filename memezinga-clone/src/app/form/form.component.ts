@@ -1,5 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { Meme } from '../meme';
+import { MemesService } from '../memes.service';
 
 @Component({
   selector: 'app-form',
@@ -9,12 +10,16 @@ import { Meme } from '../meme';
 export class FormComponent implements OnInit {
   @Input() meme: Meme;
 
-  constructor() { }
+  constructor(private memesService: MemesService) { }
 
   ngOnInit() {
   }
 
-  cambiarMeme(event) {
+  cambiarMeme(event): void {
     this.meme[event.target.name] = event.target.value;
+  }
+
+  guardar(): void {
+    this.memesService.addMeme(this.meme);
   }
 }

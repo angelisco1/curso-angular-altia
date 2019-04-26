@@ -6,6 +6,7 @@ import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { MemeComponent } from './meme/meme.component';
 import { FormComponent } from './form/form.component';
+import { ListaMemesComponent } from './lista-memes/lista-memes.component';
 
 @NgModule({
   declarations: [
@@ -13,7 +14,8 @@ import { FormComponent } from './form/form.component';
     HeaderComponent,
     FooterComponent,
     MemeComponent,
-    FormComponent
+    FormComponent,
+    ListaMemesComponent
   ],
   imports: [
     BrowserModule

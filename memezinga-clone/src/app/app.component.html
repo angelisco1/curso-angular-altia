@@ -5,4 +5,7 @@
   <app-form [meme]="meme"></app-form>
 </div>
 
+<button type="button" (click)="verLista = !verLista">{{ verLista ? 'Ocultar' : 'Ver' }} mis memes</button>
+<app-lista-memes *ngIf="verLista"></app-lista-memes>
+
 <app-footer></app-footer>
