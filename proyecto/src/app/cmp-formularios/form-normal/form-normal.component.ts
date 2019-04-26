@@ -19,6 +19,6 @@ export class FormNormalComponent implements OnInit {
   }
 
   guardar(miFormulario) {
-    console.log(miFormulario);
+    console.log(miFormulario.value);
   }
 }
