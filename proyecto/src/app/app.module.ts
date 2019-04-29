@@ -17,6 +17,8 @@ import { FormReactivoComponent } from './cmp-formularios/form-reactivo/form-reac
 import { CmpServiciosComponent } from './cmp-servicios/cmp-servicios.component';
 import { UsuarioAComponent } from './cmp-servicios/usuario-a/usuario-a.component';
 import { UsuarioBComponent } from './cmp-servicios/usuario-b/usuario-b.component';
+import { CmpObservablesComponent } from './cmp-observables/cmp-observables.component';
+import { CmpHttpComponent } from './cmp-http/cmp-http.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +36,9 @@ import { UsuarioBComponent } from './cmp-servicios/usuario-b/usuario-b.component
     FormReactivoComponent,
     CmpServiciosComponent,
     UsuarioAComponent,
-    UsuarioBComponent
+    UsuarioBComponent,
+    CmpObservablesComponent,
+    CmpHttpComponent
   ],
   imports: [
     BrowserModule,
