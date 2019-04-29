@@ -1,3 +1,9 @@
-<p>
-  cmp-http works!
-</p>
+<h1>Peticiones HTTP</h1>
+<input type="text" (change)="guardar($event.target.value)">
+<ul>
+  <li *ngFor="let t of tareas">
+    {{t.nombre}}
+    <button type="button" (click)="eliminar(t.id)">Eliminar</button>
+    <button type="button" (click)="actualizar(t.id)">Actualizar</button>
+  </li>
+</ul>
