@@ -20,6 +20,9 @@ import { UsuarioAComponent } from './cmp-servicios/usuario-a/usuario-a.component
 import { UsuarioBComponent } from './cmp-servicios/usuario-b/usuario-b.component';
 import { CmpObservablesComponent } from './cmp-observables/cmp-observables.component';
 import { CmpHttpComponent } from './cmp-http/cmp-http.component';
+import { CmpRoutingComponent } from './cmp-routing/cmp-routing.component';
+import { InicioComponent } from './cmp-routing/inicio/inicio.component';
+import { NuevoUsuarioComponent } from './cmp-routing/nuevo-usuario/nuevo-usuario.component';
 
 @NgModule({
   declarations: [
@@ -39,7 +42,10 @@ import { CmpHttpComponent } from './cmp-http/cmp-http.component';
     UsuarioAComponent,
     UsuarioBComponent,
     CmpObservablesComponent,
-    CmpHttpComponent
+    CmpHttpComponent,
+    CmpRoutingComponent,
+    InicioComponent,
+    NuevoUsuarioComponent
   ],
   imports: [
     BrowserModule,
