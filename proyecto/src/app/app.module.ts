@@ -27,6 +27,7 @@ import { Routing } from './cmp-routing/app.routes';
 import { UsuarioComponent } from './cmp-routing/usuario/usuario.component';
 import { InfoUsuarioComponent } from './cmp-routing/info-usuario/info-usuario.component';
 import { EditarUsuarioComponent } from './cmp-routing/editar-usuario/editar-usuario.component';
+import { ErrorComponent } from './cmp-routing/error.component';
 
 @NgModule({
   declarations: [
@@ -52,7 +53,8 @@ import { EditarUsuarioComponent } from './cmp-routing/editar-usuario/editar-usua
     NuevoUsuarioComponent,
     UsuarioComponent,
     InfoUsuarioComponent,
-    EditarUsuarioComponent
+    EditarUsuarioComponent,
+    ErrorComponent
   ],
   imports: [
     BrowserModule,
