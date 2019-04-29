@@ -23,6 +23,10 @@ import { CmpHttpComponent } from './cmp-http/cmp-http.component';
 import { CmpRoutingComponent } from './cmp-routing/cmp-routing.component';
 import { InicioComponent } from './cmp-routing/inicio/inicio.component';
 import { NuevoUsuarioComponent } from './cmp-routing/nuevo-usuario/nuevo-usuario.component';
+import { Routing } from './cmp-routing/app.routes';
+import { UsuarioComponent } from './cmp-routing/usuario/usuario.component';
+import { InfoUsuarioComponent } from './cmp-routing/info-usuario/info-usuario.component';
+import { EditarUsuarioComponent } from './cmp-routing/editar-usuario/editar-usuario.component';
 
 @NgModule({
   declarations: [
@@ -45,13 +49,17 @@ import { NuevoUsuarioComponent } from './cmp-routing/nuevo-usuario/nuevo-usuario
     CmpHttpComponent,
     CmpRoutingComponent,
     InicioComponent,
-    NuevoUsuarioComponent
+    NuevoUsuarioComponent,
+    UsuarioComponent,
+    InfoUsuarioComponent,
+    EditarUsuarioComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    Routing
   ],
   providers: [],
   bootstrap: [AppComponent]
