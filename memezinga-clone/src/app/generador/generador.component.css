@@ -1,13 +1,10 @@
-h1 {
+h2 {
   text-align: center;
 }
 
-nav > ul {
+.main-container {
   display: flex;
+  align-items: center;
+  flex-wrap: wrap;
   justify-content: space-evenly;
-}
-
-nav > ul > li {
-  list-style: none;
-  display: inline;
 }
