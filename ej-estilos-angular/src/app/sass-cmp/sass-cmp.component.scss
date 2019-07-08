@@ -1,0 +1,20 @@
+@import './_colores.sass';
+
+h1 {
+  color: $color1;
+}
+
+div.caja {
+  width: 200px;
+  height: 200px;
+  background-color: yellow;
+
+  h1 {
+    color: green;
+    &:hover {
+      background-color: red;
+    }
+  }
+}
+
+https://we.tl/t-f5S0ZExPQr

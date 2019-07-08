@@ -1,0 +1,23 @@
+<h1>Layout</h1>
+
+<mat-card class="card">
+    <mat-card-header>
+      <mat-card-title>Angular</mat-card-title>
+      <mat-card-subtitle>Introducción</mat-card-subtitle>
+      <img mat-card-avatar src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Angular_full_color_logo.svg/512px-Angular_full_color_logo.svg.png" alt="">
+    </mat-card-header>
+    <img class="bgwhite" mat-card-image src="https://cdn.worldvectorlogo.com/logos/angular-3.svg" alt="">
+    <mat-card-content>
+      <p>Angular, es un framework para aplicaciones web desarrollado en TypeScript, de código abierto, mantenido por Google, que se utiliza para crear y mantener aplicaciones web de una sola página.</p>
+    </mat-card-content>
+    <mat-card-actions align="end">
+      <a href="https://angular.io/" target="_blank" mat-button>Documentación</a>
+      <button type="button" mat-button>+Info</button>
+    </mat-card-actions>
+  </mat-card>
+
+<mat-grid-list cols="3" rowHeight="100px" gutterSize="5px">
+  <mat-grid-tile colspan="1" rowspan="1" [style.background]="'red'">1</mat-grid-tile>
+  <mat-grid-tile colspan="1" rowspan="1" [style.background]="'blue'">2</mat-grid-tile>
+  <mat-grid-tile colspan="2" rowspan="2" [style.background]="'yellow'">3</mat-grid-tile>
+</mat-grid-list>

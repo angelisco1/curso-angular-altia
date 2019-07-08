@@ -1,0 +1,44 @@
+<h1>Navigation</h1>
+
+<mat-menu #miMenu="matMenu">
+  <button mat-menu-item>Mi perfil</button>
+  <button mat-menu-item [matMenuTriggerFor]="comprasMenu">Mis compras</button>
+  <button mat-menu-item>Logout</button>
+</mat-menu>
+
+<mat-menu #comprasMenu="matMenu">
+  <button mat-menu-item>Pendientes</button>
+  <button mat-menu-item>Recibidas</button>
+</mat-menu>
+
+<button mat-button [matMenuTriggerFor]="miMenu">Mostrar menú</button>
+
+
+<mat-sidenav-container>
+  <mat-sidenav opened mode="push" #sidenav>
+    <h3>Menu lateral</h3>
+    <button (click)="sidenav.close()">Cerrar sidenav</button>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <h2>Contenido de la página</h2>
+    <button (click)="sidenav.open()">Mostrar sidenav</button>
+  </mat-sidenav-content>
+</mat-sidenav-container>
+
+<mat-toolbar color="primary">
+    <span>Toolbar</span>
+    <span style="flex: 1 1 auto;"></span>
+    <button mat-icon-button>
+      <mat-icon>delete</mat-icon>
+    </button>
+  </mat-toolbar>
+
+
+  <mat-toolbar color="accent">
+      <mat-toolbar-row>
+        <span>Toolbar 1</span>
+      </mat-toolbar-row>
+      <mat-toolbar-row>
+        <span>Toolbar 1.1</span>
+      </mat-toolbar-row>
+    </mat-toolbar>

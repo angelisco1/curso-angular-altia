@@ -1,0 +1,28 @@
+<h1>Inputs</h1>
+
+<mat-form-field appearance="outline">
+  <mat-label>Nombre:</mat-label>
+  <input matInput type="text" placeholder="Nombre" [formControl]="nombre">
+  <mat-hint>Obligatorio</mat-hint>
+  <mat-hint align="end">Aquí va el nombre</mat-hint>
+  <mat-icon matSuffix>bug_report</mat-icon>
+  <mat-icon matPrefix>code</mat-icon>
+  <mat-error *ngIf="nombre.hasError('required')">Es obligatorio</mat-error>
+</mat-form-field>
+
+<mat-checkbox labelPosition="before" name="hobbies">Tenis</mat-checkbox>
+<mat-checkbox labelPosition="before" name="hobbies">Futbol</mat-checkbox>
+<mat-checkbox labelPosition="before" name="hobbies">Cine</mat-checkbox>
+<mat-checkbox labelPosition="before" name="hobbies">Otros</mat-checkbox>
+
+<label for="">Hace calor?</label>
+<mat-radio-button name="calor" value="1">Si</mat-radio-button>
+<mat-radio-button name="calor" value="2">Siiiii</mat-radio-button>
+
+<mat-form-field>
+  <input matInput type="text" [matDatepicker]="calendario">
+  <mat-datepicker-toggle matSuffix [for]="calendario"></mat-datepicker-toggle>
+  <mat-datepicker #calendario></mat-datepicker>
+</mat-form-field>
+
+<mat-slide-toggle>Wifi encendido?</mat-slide-toggle>
